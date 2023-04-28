@@ -94,7 +94,10 @@ document.querySelectorAll(".nav-item a").forEach((link) => {
 			history.replaceState({}, document.title, window.location.pathname);
 		}, 1000);
 		var elementY = element.getBoundingClientRect().top + window.pageYOffset;
-		window.scrollTo({ top: elementY - document.querySelector(".navbar").offsetHeight - 10, behavior: "smooth" });
+		window.scrollTo({
+			top: elementY - document.querySelector(".navbar").offsetHeight - 10,
+			behavior: "smooth",
+		});
 	});
 });
 
@@ -207,3 +210,12 @@ function setInactiveClass(id) {
 		}
 	});
 }
+
+$("#igHover").hover(
+	function () {
+		$("#hoveredItem").text("/athena.3140");
+	},
+	function () {
+		$("#hoveredItem").text("/athena3140");
+	}
+);
