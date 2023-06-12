@@ -17,9 +17,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="rgb(220,53,69)" />
 		<meta name="language" content="en" />
 		<meta name="author" content="Dev Athena" />
-		<!-- Link Connection -->
-		<link rel="preconnect" href="http://athena3140.tech/portfolio/#formSubmit" />
-		<link rel="preload" href="http://athena3140.tech/portfolio/#formSubmit" />
+		<meta name="referrer" content="origin" />
 		<link rel="preconnect" href="./static/audio.mp3" />
 		<link rel="preload" href="./static/audio.mp3" />
 		<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/backdrop.css" />
@@ -28,11 +26,21 @@
 		<link rel="preconnect" href="https://cdn.athena3140.tech/logo.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
 		<link rel="preconnect" href="./static/audio.mp3" />
 		<link rel="icon" href="./static/images/favicon-32x32.png" />
-		<link rel="stylesheet" href="./cdn-css/fontawesome.all.min.css" />
-		<link rel="stylesheet" href="./cdn-css/animate.min.css" />
-		<link rel="stylesheet" href="./cdn-css/bootstrap.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+			crossorigin="anonymous" />
 		<link rel="stylesheet" href="./static/style.css" />
 		<title>| &nbsp;&nbsp;Athena's Portfolio</title>
 		<script
@@ -57,19 +65,14 @@
 				<div></div>
 			</div>
 		</div>
-
-		<!-- <NAV> -->
-		<nav
-			id="navbar"
-			style="z-index: 100000"
-			class="navbar pt-3 navbar-expand-lg bg-light shadow-sm sticky-top">
+		<nav id="navbar" class="navbar pt-3 navbar-expand-lg bg-light shadow-sm sticky-top">
 			<div class="container">
-				<a class="navbar-brand text-danger fs-3 logo" href="" onclick="location.reload()">Athena</a>
+				<a class="navbar-brand text-danger fs-3 logo" onclick="location.reload()">Athena</a>
 				<button
 					class="navbar-toggler"
 					type="button"
-					data-toggle="collapse"
-					data-target="#navbarNav"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
 					aria-controls="navbarNav"
 					aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -99,13 +102,9 @@
 				</div>
 			</div>
 		</nav>
-		<!-- </NAV> -->
-
 		<div class="upIcon" id="upIcon" animation="scale">
 			<i class="fa-solid fa-angle-up"></i>
 		</div>
-
-		<!-- <HOME> -->
 		<section id="home" class="home min-vh-75 mb-5 pt-5 pb-4 px-md-3">
 			<div class="container-lg">
 				<div class="row">
@@ -147,9 +146,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </HOME > -->
-
-		<!-- <about-me> -->
 		<section id="about-me" class="about-me mt-5">
 			<div class="container-lg">
 				<div class="row justify-content-center mb-5">
@@ -160,10 +156,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 pe-md-4">
-						<div class="text-skill">
-							<h3 class="fs-3 mb-3">Journey Of My Passion</h3>
-						</div>
+					<div class="text-skill">
+						<h3 class="fs-3 mb-3">Journey Of My Passion</h3>
+					</div>
+					<div class="col-md-6 pe-md-4 d-flex flex-column justify-content-between">
 						<p class="text-muted" style="font-size: 1rem">
 							In May 2022, my brother introduced me to
 							<a href="https://www.youtube.com/@MSquareProgramming"> web development channel</a>
@@ -175,7 +171,7 @@
 							<u class="text-danger fw-bold">Athena</u> in "
 							<a href="https://www.imdb.com/title/tt1964418/">Tomorrowland</a>".
 						</p>
-						<div class="row text-center my-5">
+						<div class="row text-center my-5 my-md-0">
 							<div class="col-4 col-md-4">
 								<div class="items">
 									<h4 class="fs-1 fw-bold">8+</h4>
@@ -196,16 +192,16 @@
 							</div>
 						</div>
 						<!-- Contact Section -->
-						<div class="row">
+						<div class="row" style="width: fit-content">
 							<div class="col-lg-12 d-flex align-items-center">
 								<button
 									class="popupToggle text-decoration-none text-white btn btn-danger fs-md-4 fs-6 px-md-3"
-									data-toggle="modal"
-									data-target=".bd-example-modal-lg4">
+									data-bs-toggle="modal"
+									data-bs-target=".bd-example-modal-lg4">
 									Download CV
 								</button>
-								<div class="links ms-5 d-flex flex-column">
-									<div class="up d-flex gap-3 gap-md-4">
+								<div class="links ms-3 ms-md-5 d-flex flex-column">
+									<div class="up d-flex align-items-center gap-3 gap-md-4">
 										<a
 											class="link-hover text-dark h3"
 											href="https://github.com/athena3140/"
@@ -232,7 +228,7 @@
 											target="_blank"
 											><i class="fa-brands fa-twitter"></i
 										></a>
-										<h4 class="overflow-hidden">
+										<h4 class="overflow-hidden d-lg-block d-none">
 											<div class="hover-username" id="hoveredItem">/athena3140</div>
 										</h4>
 									</div>
@@ -241,63 +237,73 @@
 							<div
 								class="end mt-2 text-muted d-flex justify-content-center align-items-md-center">
 								<i class="text-warning-emphasis fs-5 fa-regular fa-circle-exclamation"></i>
-								<b class="mx-2">Note:</b>
-								All social media links are athena3140, except for Instagram.
+								<div>
+									<b class="mx-2">Note:</b>All social media links are athena3140, except
+									for Instagram.
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-6 my-5">
+					<div class="col-md-6 mt-5 mt-md-0 mb-3">
 						<div class="d-flex flex-column gap-4 gap-md-5">
 							<div class="skill">
 								<h3 class="h4 d-flex">HTML <i class="ms-2 h2 fa-brands fa-html5"></i></h3>
-								<div class="progress" style="height: 6px">
+								<div class="progress">
 									<div
-										class="progress-bar bg-danger"
+										class="progress-bar bg-danger progress-bar-striped"
 										role="progressbar"
 										style="width: 85%"
 										aria-valuenow="85"
 										aria-valuemin="0"
-										aria-valuemax="100"></div>
+										aria-valuemax="100">
+										85%
+									</div>
 								</div>
 							</div>
 							<div class="skill">
 								<h3 class="h4 d-flex">CSS <i class="ms-2 h2 fa-brands fa-css3-alt"></i></h3>
-								<div class="progress" style="height: 6px">
+								<div class="progress">
 									<div
-										class="progress-bar bg-danger"
+										class="progress-bar bg-danger progress-bar-striped"
 										role="progressbar"
 										style="width: 65%"
 										aria-valuenow="65"
 										aria-valuemin="0"
-										aria-valuemax="100"></div>
+										aria-valuemax="100">
+										65%
+									</div>
 								</div>
 							</div>
 							<div class="skill">
 								<h3 class="h4 d-flex">
 									JavaScript <i class="ms-2 h2 fa-brands fa-square-js"></i>
 								</h3>
-								<div class="progress" style="height: 6px">
+								<div class="progress">
 									<div
-										class="progress-bar bg-danger"
+										class="progress-bar bg-danger progress-bar-striped"
 										role="progressbar"
 										style="width: 50%"
 										aria-valuenow="50"
 										aria-valuemin="0"
-										aria-valuemax="100"></div>
+										aria-valuemax="100">
+										50%
+									</div>
 								</div>
 							</div>
 							<div class="skill">
 								<h3 class="h4 d-flex">
 									BootStrap <i class="ms-2 h2 fa-brands fa-bootstrap"></i>
 								</h3>
-								<div class="progress" style="height: 6px">
+								<div class="progress">
 									<div
-										class="progress-bar bg-danger"
+										class="progress-bar bg-danger progress-bar-striped"
 										role="progressbar"
 										style="width: 75%"
 										aria-valuenow="75"
 										aria-valuemin="0"
-										aria-valuemax="100"></div>
+										aria-valuemax="100">
+										75%
+									</div>
 								</div>
 							</div>
 						</div>
@@ -305,9 +311,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </about-me> -->
-
-		<!-- <Service> -->
 		<section id="service" class="service">
 			<div class="container-lg">
 				<div class="row justify-content-center mt-5 mb-4">
@@ -367,9 +370,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </service> -->
-
-		<!-- <Project>-->
 		<section id="projects" class="project pb-3 pb-md-5 mt-4 mb-0 my-md-5 pt-md-5">
 			<div class="container-xxl">
 				<div class="row justify-content-center mt-5 mb-4">
@@ -441,9 +441,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </Project>-->
-
-		<!-- <Pricing> -->
 		<section id="pricing" class="pricing my-5 mt-2 py-5 mt-5 py-md-5 bg-danger d-flex align-items-center">
 			<div class="container-lg">
 				<div class="row text-center">
@@ -461,9 +458,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </Pricing> -->
-
-		<!-- <reviews> -->
 		<section id="reviews" class="my-5">
 			<div class="container-lg">
 				<div class="row justify-content-center mt-5 mb-4">
@@ -478,24 +472,23 @@
 
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-8">
-						<div id="reviewCarousel" class="shadow-lg carousel slide">
+						<div id="reviewCarousel" class="shadow-lg carousel slide" data-bs-ride="carousel">
 							<div class="carousel-indicators">
 								<button
 									type="button"
 									data-bs-target="#reviewCarousel"
 									data-bs-slide-to="0"
-									class="bg-danger"
 									aria-current="true"
 									aria-label="Slide 1"></button>
 								<button
 									type="button"
-									class="bg-danger active"
+									class="active"
+									aria-current="true"
 									data-bs-target="#reviewCarousel"
 									data-bs-slide-to="1"
 									aria-label="Slide 2"></button>
 								<button
 									type="button"
-									class="bg-danger"
 									data-bs-target="#reviewCarousel"
 									data-bs-slide-to="2"
 									aria-label="Slide 3"></button>
@@ -620,9 +613,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- </reviews> -->
-
-		<!-- <Contact ME> -->
 		<section id="contact" class="my-5">
 			<div class="container-lg">
 				<div class="row justify-content-center my-5">
@@ -633,7 +623,6 @@
 					</div>
 				</div>
 				<div class="row">
-					<!-- <left> -->
 					<div class="col-md-5 mb-5 d-flex justify-content-center">
 						<div class="d-flex flex-column gap-4">
 							<div class="contactCards d-flex align-items-center">
@@ -686,13 +675,12 @@
 							</div>
 						</div>
 					</div>
-					<!-- </left> -->
-
-					<!-- <right> -->
-					<div class="col-md-7 position-relative">
-						<div class="row overflow-hidden formAlert">
+					<div
+						id="FORMDIV"
+						class="col-md-7 position-relative d-flex justify-content-center flex-column align-items-md-start align-items-center">
+						<div class="row px-2 justify-content-center formAlert" style="display: none">
 							<div
-								class="col-10 w-100 position-absolute d-flex align-items-center flex-column pt-5 h-100 shadow-lg px-0 rounded bg-body-tertiary">
+								class="col-11 position-relative col-md-12 w-100 shadow-lg d-flex align-items-center pt-5 gap-2 flex-column px-0 rounded">
 								<div class="success-checkmark">
 									<div class="check-icon">
 										<span class="icon-line line-tip"></span>
@@ -701,403 +689,117 @@
 										<div class="icon-fix"></div>
 									</div>
 								</div>
-								<h1>Form Submitted</h1>
-								<div class="indicator rounded align-self-baseline"></div>
+								<h3>Message Sent</h3>
+								<p class="px-2 px-md-5 text-center">
+									Thank you for submitting the form! I appreciate your interest and will
+									review the information you provided. I'll get back to you as soon as
+									possible.
+								</p>
+								<div class="indicator"></div>
 							</div>
 						</div>
-						<form action="https://formsubmit.co/134e4ab60ba2ed7bd5e8298e0d4a7e25" method="post">
+						<form action="#" method="post" class="p-2">
+							<div
+								class="alert alert-danger w-100 formError"
+								style="display: none; transition: none">
+								<h5 class="text-center">There are some errors, please correct them.</h5>
+								<hr />
+								<ul></ul>
+							</div>
 							<input type="hidden" name="_template" value="table" />
-							<input
-								type="hidden"
-								name="_next"
-								value="http://athena3140.tech/portfolio/#formSubmit" />
 							<input type="hidden" name="_captcha" value="false" tabindex="-1" />
-							<input
-								type="hidden"
-								name="_url"
-								value="https://athena3140.tech/portfolio/contact.html" />
 							<div class="row">
 								<div class="col-lg-6">
-									<label for="name" class="form-label">Your Name :</label>
+									<label for="name" class="form-label"
+										>Name <span class="text-danger">*</span></label
+									>
 									<input
 										id="name"
 										type="text"
 										name="name"
-										class="border mb-4 form-control fs-5"
+										class="border border-danger-subtle mb-4 form-control fs-5 focus-ring-danger focus-ring"
 										placeholder="e.g. Athena"
-										autocomplete="on"
-										required />
+										autocomplete="on" />
 								</div>
 								<div class="col-lg-6">
-									<label for="email" class="form-label">Your Email :</label>
+									<label for="email" class="form-label"
+										>Email <span class="text-danger">*</span></label
+									>
 									<input
 										id="email"
 										type="email"
 										name="email"
-										class="border mb-4 form-control fs-5"
+										class="border border-danger-subtle mb-4 form-control fs-5 focus-ring-danger focus-ring"
 										placeholder="e.g. admin@athena3140.tech"
-										autocomplete="on"
-										required />
+										autocomplete="on" />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<label for="subject" class="form-label">Subject :</label>
+									<label for="subject" class="form-label"
+										>Subject <span class="text-danger">*</span></label
+									>
 									<input
 										id="subject"
 										type="text"
 										name="subject"
-										class="border mb-4 form-control fs-5"
+										class="border border-danger-subtle mb-4 form-control fs-5 focus-ring-danger focus-ring"
 										placeholder="e.g. Contact about Project X"
-										autocomplete="on"
-										required />
+										autocomplete="on" />
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-12 mb-4">
-									<label for="message" class="form-label">Your Message :</label>
+									<label for="message" class="form-label"
+										>Message <span class="text-danger">*</span></label
+									>
 									<textarea
 										id="message"
-										class="border fs-5 form-control"
+										class="border border-danger-subtle fs-5 form-control focus-ring-danger focus-ring"
 										placeholder="e.g. Dear Athena..."
 										rows="4"
-										name="message"
-										required></textarea>
+										name="message"></textarea>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-12">
-									<button id="submit" type="submit" class="btn btn-danger px-3">
+									<button id="submit" type="submit" class="disabled btn btn-danger px-3">
 										Send <i class="fa-solid fa-paper-plane"></i>
 									</button>
 								</div>
 							</div>
 						</form>
 					</div>
-					<!-- </right> -->
 				</div>
 			</div>
 		</section>
-		<!-- </Contact ME> -->
-
-		<!-- <Footer> -->
-		<footer class="footer py-4 border-top border-danger">
-			<div class="container-lg">
+		<footer class="footer bg-danger py-3">
+			<div class="container">
 				<div class="row">
-					<div class="col-lg-12">
-						<h3 class="text-center text-muted">Copyright © 2023 Athena. All rights reserved</h3>
-						<div class="text-center mt-4">
-							<button
-								class="popupToggle bg-light"
-								data-toggle="modal"
-								data-target=".bd-example-modal-lg1">
-								Privacy Policy
-							</button>
-							&nbsp;|&nbsp;
-							<button
-								class="popupToggle bg-light"
-								data-toggle="modal"
-								data-target=".bd-example-modal-lg2">
-								Terms of Use
-							</button>
-							&nbsp;|&nbsp;
-							<button
-								class="popupToggle bg-light"
-								data-toggle="modal"
-								data-target=".bd-example-modal-lg3">
-								Cookies
-							</button>
-						</div>
+					<div class="col-md-6">
+						<p class="text-white mb-0 text-center">
+							Copyright &copy; 2023 Athena. All rights reserved.
+						</p>
+					</div>
+					<div class="col-md-6 d-none d-md-block">
+						<ul class="list-inline text-end m-0">
+							<li class="list-inline-item">
+								<a href="#home" class="text-white text-decoration-none">Home</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#about-me" class="text-white text-decoration-none">About</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#service" class="text-white text-decoration-none">Services</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#projects" class="text-white text-decoration-none">Projects</a>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</footer>
-		<!-- </Footer> -->
-
-		<!-- <Popup> -->
-		<div
-			class="modal fade bd-example-modal-lg1"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="myLargeModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title text-danger" id="exampleModalLongTitle">Privacy Policy</h5>
-						<button
-							type="button"
-							class="border-0 bg-white fs-3 close"
-							data-dismiss="modal"
-							aria-label="Close">
-							<i class="fa-solid fa-xmark"></i>
-						</button>
-					</div>
-					<div class="modal-body">
-						<!-- Privacy Policy (Not for Real - Demonstration Purposes Only) -->
-						<h3>Privacy Policy (Not for Real - Demonstration Purposes Only)</h3>
-
-						<p>
-							At Athena3140, we respect your privacy and are committed to protecting the
-							personal information you share with us. This Privacy Policy outlines how we
-							collect, use, store, and protect your personal information when you visit our
-							portfolio website.
-						</p>
-
-						<h4>Information Collection</h4>
-
-						<p>
-							We collect personal information from visitors who choose to provide it to us, such
-							as their name and email address. This information is collected through contact
-							forms, newsletters, and other forms of communication on our website.
-						</p>
-
-						<h4>Purpose of Collection</h4>
-
-						<p>
-							The personal information collected is used to respond to inquiries, provide
-							updates and information about our services, and improve the overall user
-							experience. We will not use your personal information for any other purpose unless
-							we have your express consent.
-						</p>
-
-						<h4>Data Retention</h4>
-
-						<p>
-							We will retain your personal information for as long as it is necessary to fulfill
-							the purpose for which it was collected and as required by law.
-						</p>
-
-						<h4>Sharing of Information</h4>
-
-						<p>
-							We do not share, sell, or rent personal information to third parties. We may
-							disclose personal information if required to do so by law or in the good faith
-							belief that such action is necessary to comply with legal obligations or to
-							protect the rights, property, or safety of [Your Name or Company Name], our users,
-							or the public.
-						</p>
-
-						<h4>Data Security</h4>
-
-						<p>
-							We take reasonable measures to protect personal information from unauthorized
-							access, alteration, or destruction. However, no system can be completely secure
-							and we cannot guarantee the security of personal information.
-						</p>
-
-						<h4>User Rights</h4>
-
-						<p>
-							You have the right to access, correct, or delete your personal information at any
-							time. If you wish to exercise these rights, please contact us at [Your Contact
-							Information].
-						</p>
-
-						<h4>Changes to the Privacy Policy</h4>
-
-						<p>
-							We reserve the right to modify this Privacy Policy at any time. Any changes will
-							be posted on this page and will become effective immediately upon posting. Your
-							continued use of the website constitutes your agreement to the updated Privacy
-							Policy.
-						</p>
-
-						<h4>Contact Us</h4>
-
-						<p>
-							If you have any questions or concerns about this Privacy Policy, please contact us
-							at [Your Contact Information].
-						</p>
-
-						<p>Last updated: 2023-02-01</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div
-			class="modal fade bd-example-modal-lg2"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="myLargeModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title text-danger" id="exampleModalLongTitle">Terms of Use</h5>
-						<button
-							type="button"
-							class="border-0 bg-white fs-3 close"
-							data-dismiss="modal"
-							aria-label="Close">
-							<i class="fa-solid fa-xmark"></i>
-						</button>
-					</div>
-					<div class="modal-body">
-						<!-- Terms of Use (Not for Real - Demonstration Purposes Only) -->
-						<h4>Terms of Use (Not for Real - Demonstration Purposes Only)</h4>
-
-						<p>
-							Welcome to Athena3140's portfolio website. By accessing and using our website, you
-							agree to be bound by the terms and conditions set forth in this Terms of Use
-							agreement. If you do not agree to these terms, please do not use our website.
-						</p>
-
-						<h5>Content and Ownership</h5>
-
-						<p>
-							The content on our website, including but not limited to text, graphics, logos,
-							icons, images, audio, and video, is owned by Athena3140 and is protected by
-							copyright and other intellectual property laws. You may not use the content for
-							any commercial purpose without the express written consent of Athena3140.
-						</p>
-
-						<h5>Website Use</h5>
-
-						<p>
-							You may not use our website in any manner that could damage, disable, overburden,
-							or impair the website or interfere with any other party's use and enjoyment of the
-							website. You may not obtain or attempt to obtain any materials or information
-							through any means not intentionally made available or provided for through the
-							website.
-						</p>
-
-						<h5>Links to Third-Party Websites</h5>
-
-						<p>
-							Our website may contain links to third-party websites. These links are provided
-							for your convenience and do not imply any endorsement of the linked website or its
-							contents. Athena3140 is not responsible for the content, privacy policies, or
-							practices of any third-party websites. You access these websites at your own risk.
-						</p>
-
-						<h5>Warranty Disclaimer</h5>
-
-						<p>
-							Athena3140 makes no representations or warranties of any kind, express or implied,
-							as to the operation of the website or the information, content, materials, or
-							products included on the website. To the fullest extent permitted by applicable
-							law, Athena3140 disclaims all warranties, express or implied, including but not
-							limited to warranties of merchantability and fitness for a particular purpose.
-						</p>
-
-						<h5>Limitation of Liability</h5>
-
-						<p>
-							In no event will Athena3140 be liable for any damages of any kind arising from the
-							use of the website, including but not limited to direct, indirect, incidental,
-							punitive, and consequential damages.
-						</p>
-
-						<h5>Applicable Law</h5>
-
-						<p>
-							This Terms of Use agreement shall be governed by and construed in accordance with
-							the laws of the state in which Athena3140 is located, without giving effect to its
-							conflict of laws provisions.
-						</p>
-
-						<h5>Changes to the Terms of Use</h5>
-
-						<p>
-							Athena3140 reserves the right to modify these terms at any time without prior
-							notice. Your continued use of the website constitutes your agreement to the
-							updated Terms of Use agreement.
-						</p>
-
-						<p>Last updated: 2023-02-01</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div
-			class="modal fade bd-example-modal-lg3"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="myLargeModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title text-danger" id="exampleModalLongTitle">Cookie Policy</h5>
-						<button
-							type="button"
-							class="border-0 bg-white fs-3 close"
-							data-dismiss="modal"
-							aria-label="Close">
-							<i class="fa-solid fa-xmark"></i>
-						</button>
-					</div>
-					<div class="modal-body">
-						<!-- Cookie Policy (Not for Real - Demonstration Purposes Only) -->
-						<h4>Cookie Policy (Not for Real - Demonstration Purposes Only)</h4>
-
-						<p>
-							Athena3140's portfolio website uses cookies to improve your browsing experience. A
-							cookie is a small text file that is stored on your device when you visit our
-							website. Cookies allow us to remember your preferences and to understand how you
-							use our website. This policy explains what cookies are and how we use them.
-						</p>
-
-						<h5>What are Cookies?</h5>
-
-						<p>
-							Cookies are small text files that are stored on your device when you visit our
-							website. They are used to remember your preferences, to understand how you use our
-							website, and to provide a more personalized experience. Cookies do not collect any
-							personal information that can be used to identify you, and they cannot harm your
-							device.
-						</p>
-
-						<h5>How do we use Cookies?</h5>
-
-						<p>
-							We use cookies to understand how you use our website and to improve your browsing
-							experience. For example, we use cookies to remember your preferences, such as your
-							preferred language or the items you have added to your shopping cart. We also use
-							cookies to provide you with relevant advertisements and to analyze website
-							traffic.
-						</p>
-
-						<h5>Third-Party Cookies</h5>
-
-						<p>
-							We may also use third-party cookies from service providers such as Google
-							Analytics. These cookies allow us to understand how you use our website and to
-							improve your browsing experience. Third-party cookies are subject to the privacy
-							policies of the third-party providers.
-						</p>
-
-						<h5>How to Manage Cookies</h5>
-
-						<p>
-							You can control the use of cookies on our website by adjusting your browser
-							settings. Most browsers allow you to block or delete cookies, but please note that
-							disabling cookies may limit your ability to use our website and its features.
-						</p>
-
-						<h5>Changes to our Cookie Policy</h5>
-
-						<p>
-							Athena3140 reserves the right to modify this Cookie Policy at any time without
-							prior notice. Your continued use of the website constitutes your agreement to the
-							updated Cookie Policy.
-						</p>
-
-						<p>Last updated: 2023-02-01</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div
 			class="modal fade bd-example-modal-lg4"
 			tabindex="-1"
@@ -1111,7 +813,7 @@
 						<button
 							type="button"
 							class="border-0 bg-white fs-3 close"
-							data-dismiss="modal"
+							data-bs-dismiss="modal"
 							aria-label="Close">
 							<i class="fa-solid fa-xmark"></i>
 						</button>
@@ -1121,45 +823,25 @@
 						have a CV or any relevant documents.
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- </Popup> -->
 	</body>
 	<script src="https://unpkg.com/popper.js@1"></script>
 	<script src="https://unpkg.com/tippy.js@5"></script>
 	<script src="https://www.google.com/recaptcha/api.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js?render=6LfGiUYkAAAAAAzLKWmTFr5ZlrmyjX3JRz1RTOs6"></script>
-	<script src="./cdn-js/jquery-3.6.3.min.js"></script>
-	<script src="./cdn-js/bootstrap.min.js"></script>
-	<script src="./cdn-js/bootstrap.bundle.min.js"></script>
-	<script src="./cdn-js/fontawesome.all.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+		integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+		crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
 	<script src="./static/script.js"></script>
-	<script>
-		tippy("#upIcon", {
-			animation: "shift-toward",
-			content: "Back To Top",
-			placement: "left",
-		});
-
-		const toolTip = tippy("#imgclick", {
-			content: "Click 5 Times To Activate The Easter Egg",
-			delay: [400, 200],
-			animation: "shift-toward",
-			theme: "myTheme",
-			multiple: true,
-		});
-
-		const easterAlert = tippy("#imgclick", {
-			content: "Double click to pause the song",
-			animation: "shift-toward",
-			placement: "left",
-			multiple: true,
-			trigger: "manual",
-			hideOnClick: false,
-			delay: [200, 200],
-		});
-	</script>
 </html>
