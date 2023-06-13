@@ -23,25 +23,6 @@ document.addEventListener("visibilitychange", () => {
 				document.title = "| \u00a0\u00a0Athena's Portfolio";
 		  }, 2e3));
 });
-window.addEventListener("load", () => {
-	document.body.style.cssText = "overflow:hidden; height: 100svh";
-	icon.style.cssText = "opacity: 0; pointer-events: none";
-	setTimeout(() => {
-		loader.style.cssText = "opacity:0;pointer-events:none";
-		500 > scrollY
-			? (document.getElementById("spinner").style.cssText = "transform:scale(7.5)")
-			: (document.getElementById("spinner").style.cssText = "transform:scale(.2)");
-		setTimeout(() => {
-			document.getElementById("home").classList.add("animate__animated", "animate__zoomIn");
-			500 > scrollY &&
-				document.getElementById("navbar").classList.add("animate__animated", "animate__zoomIn");
-		}, 20);
-		document.body.style.cssText = "overflow: auto; height: auto";
-	}, 500);
-	setTimeout(() => {
-		$("#loader").hide();
-	}, 1e3);
-});
 document.querySelectorAll(".nav-item a,.list-inline-item a").forEach((a) => {
 	a.addEventListener("click", function (b) {
 		b.preventDefault();
@@ -181,6 +162,7 @@ $(document).ready(function () {
 			  "" === f && (e += "<li>Subject is required</li>"),
 			  "" === g && (e += "<li>Message is required</li>"),
 			  $(".formError ul").html(e),
+			  scrollError(),
 			  $(".formError").slideDown())
 			: /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(b)
 			? ($(".formError").hide(),
@@ -204,11 +186,42 @@ $(document).ready(function () {
 							: console.error("Form submission failed: " + c);
 					},
 					error: function (c) {
-						console.error(c);
+						console.error(c),
+							$(".formError ul").html(c),
+							$(".formError").slideDown(),
+							scrollError();
 					},
 			  }))
 			: ((e += "Please enter a valid email address."),
 			  $(".formError").slideDown(),
+			  scrollError(),
 			  $(".formError ul").html(e));
 	});
+
+	window.addEventListener("load", () => {
+		document.body.style.cssText = "overflow:hidden; height: 100svh";
+		icon.style.cssText = "opacity: 0; pointer-events: none";
+		setTimeout(() => {
+			loader.style.cssText = "opacity:0;pointer-events:none";
+			500 > scrollY
+				? (document.getElementById("spinner").style.cssText = "transform:scale(7.5)")
+				: (document.getElementById("spinner").style.cssText = "transform:scale(.2)");
+			setTimeout(() => {
+				document.getElementById("home").classList.add("animate__animated", "animate__zoomIn");
+				500 > scrollY &&
+					document.getElementById("navbar").classList.add("animate__animated", "animate__zoomIn");
+			}, 20);
+			document.body.style.cssText = "overflow: auto; height: auto";
+		}, 500);
+		setTimeout(() => {
+			$("#loader").hide();
+		}, 1e3);
+	});
+
+	scrollError = () => {
+		$("#formError").length ? o() : setTimeout(o, 200);
+		function o() {
+			$("html, body").scrollTop($(".formError").offset().top - window.innerHeight / 2 + 150);
+		}
+	};
 });
