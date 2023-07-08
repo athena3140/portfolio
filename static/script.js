@@ -76,7 +76,7 @@ if (
 	}),
 	992 > screen.width)
 )
-	console.log("under992");
+	null;
 else {
 	let a = document.querySelectorAll(".navbar-nav a"),
 		b = document.querySelectorAll("section"),
@@ -207,6 +207,12 @@ $(document).ready(function () {
 				? (document.getElementById("spinner").style.cssText = "transform:scale(7.5)")
 				: (document.getElementById("spinner").style.cssText = "transform:scale(.2)");
 			setTimeout(() => {
+				new Typewriter("#typewriter", {
+					strings: ["Athena", "Linn Myat Htet"],
+					autoStart: !0,
+					loop: !0,
+					pauseFor: 1800,
+				});
 				document.getElementById("home").classList.add("animate__animated", "animate__zoomIn");
 				500 > scrollY &&
 					document.getElementById("navbar").classList.add("animate__animated", "animate__zoomIn");
@@ -225,3 +231,10 @@ $(document).ready(function () {
 		}
 	};
 });
+
+document.onreadystatechange = function () {
+	(loadStatus = document.getElementById("loadStatus")),
+		"interactive" === document.readyState
+			? (loadStatus.style.width = "50%")
+			: "complete" === document.readyState && (loadStatus.style.width = "100%");
+};

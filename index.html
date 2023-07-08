@@ -25,6 +25,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
 		<link rel="icon" href="./static/images/favicon-32x32.png" />
 		<link
 			rel="stylesheet"
@@ -60,6 +61,9 @@
 				<div></div>
 				<div></div>
 				<div></div>
+			</div>
+			<div class="load-bar">
+				<div id="loadStatus"></div>
 			</div>
 		</div>
 		<nav id="navbar" class="navbar pt-3 navbar-expand-lg bg-light shadow-sm sticky-top">
@@ -123,11 +127,11 @@
 						</div>
 					</div>
 					<div class="col-md-6 mb-0 mb-lg-0 mt-3 mt-lg-4 order-md-first">
-						<div class="name">
+						<div class="name" style="text-align: justify">
 							<div>
 								<p class="text-muted mb-1 fs-1 fw-bold">Hello I'm</p>
 								<h1 class="text-danger fw-bold">WEB DEVELOPER</h1>
-								<h2>Athena</h2>
+								<h2 id="typewriter">Athena</h2>
 							</div>
 							<p class="mt-5" style="font-size: 1.2rem !important">
 								I strive for growth and am eager to take on new challenges. My goal is to
@@ -157,14 +161,14 @@
 						<h3 class="fs-3 mb-3">Journey Of My Passion</h3>
 					</div>
 					<div class="col-md-6 pe-md-4 d-flex flex-column justify-content-between">
-						<p class="text-muted" style="font-size: 1rem">
+						<p class="text-muted" style="font-size: 1rem; text-align: justify">
 							In May 2022, my brother introduced me to
 							<a href="https://www.youtube.com/@MSquareProgramming"> web development channel</a>
 							and I changed my focus from learning Python. Nonetheless, I am dedicated to
 							improving my skills in both and eager to bring my passion to future projects. And
 							also, you may be curious about my name <u class="text-danger fw-bold">Athena</u>,
 							which was inspired by the actress
-							<a href="https://www.imdb.com/name/nm3864163/">Raffey Cassidy</a> 's role as
+							<a href="https://www.imdb.com/name/nm3864163/">Raffey Cassidy's</a> role as
 							<u class="text-danger fw-bold">Athena</u> in "
 							<a href="https://www.imdb.com/title/tt1964418/">Tomorrowland</a>".
 						</p>
@@ -247,7 +251,21 @@
 								<h3 class="h4 d-flex">HTML <i class="ms-2 h2 fa-brands fa-html5"></i></h3>
 								<div class="progress">
 									<div
-										class="progress-bar bg-danger progress-bar-striped"
+										class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
+										role="progressbar"
+										style="width: 90%"
+										aria-valuenow="90"
+										aria-valuemin="0"
+										aria-valuemax="100">
+										90%
+									</div>
+								</div>
+							</div>
+							<div class="skill">
+								<h3 class="h4 d-flex">CSS <i class="ms-2 h2 fa-brands fa-css3-alt"></i></h3>
+								<div class="progress">
+									<div
+										class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
 										role="progressbar"
 										style="width: 85%"
 										aria-valuenow="85"
@@ -258,32 +276,18 @@
 								</div>
 							</div>
 							<div class="skill">
-								<h3 class="h4 d-flex">CSS <i class="ms-2 h2 fa-brands fa-css3-alt"></i></h3>
-								<div class="progress">
-									<div
-										class="progress-bar bg-danger progress-bar-striped"
-										role="progressbar"
-										style="width: 65%"
-										aria-valuenow="65"
-										aria-valuemin="0"
-										aria-valuemax="100">
-										65%
-									</div>
-								</div>
-							</div>
-							<div class="skill">
 								<h3 class="h4 d-flex">
 									JavaScript <i class="ms-2 h2 fa-brands fa-square-js"></i>
 								</h3>
 								<div class="progress">
 									<div
-										class="progress-bar bg-danger progress-bar-striped"
+										class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
 										role="progressbar"
-										style="width: 50%"
-										aria-valuenow="50"
+										style="width: 75%"
+										aria-valuenow="75"
 										aria-valuemin="0"
 										aria-valuemax="100">
-										50%
+										75%
 									</div>
 								</div>
 							</div>
@@ -293,13 +297,13 @@
 								</h3>
 								<div class="progress">
 									<div
-										class="progress-bar bg-danger progress-bar-striped"
+										class="progress-bar bg-danger progress-bar-striped progress-bar-animated"
 										role="progressbar"
-										style="width: 75%"
-										aria-valuenow="75"
+										style="width: 80%"
+										aria-valuenow="80"
 										aria-valuemin="0"
 										aria-valuemax="100">
-										75%
+										80%
 									</div>
 								</div>
 							</div>
@@ -327,7 +331,7 @@
 								<i class="fa-solid fa-code"></i>
 							</div>
 							<h3 class="fs-4 fw-bold my-3">Web Development</h3>
-							<p class="text-muted">
+							<p class="text-muted" style="text-align: justify">
 								Transform your online presence with my web development skills in HTML, CSS,
 								JavaScript, and Bootstrap. Create custom websites with efficient code for a
 								seamless user experience. Contact me today to upgrade your online presence.
@@ -341,7 +345,7 @@
 								<i class="fa-solid fa-lightbulb"></i>
 							</div>
 							<h3 class="fs-4 fw-bold mt-3 mb-4" tabindex="-1">Creative Ideas</h3>
-							<p class="text-muted">
+							<p class="text-muted" style="text-align: justify">
 								Unlock the full potential of your website with our innovative web design &
 								development services. From custom graphics to seamless user experience, we
 								bring your vision to life with creativity and expertise. Contact now to get
@@ -356,7 +360,7 @@
 								<i class="fa-solid fa-palette"></i>
 							</div>
 							<h3 class="fs-4 fw-bold mt-3 mb-4">Graphic Designs</h3>
-							<p class="text-muted">
+							<p class="text-muted" style="text-align: justify">
 								Elevate your brand with stunning graphic design. From logos to social media
 								posts, I bring creativity and professionalism to every project. Fast
 								turnarounds and affordable rates guaranteed. Let's make your vision a
@@ -508,11 +512,12 @@
 											<sup style="display: inline-block; transform: scale(-1, 1)"
 												><i class="fa-solid fa-quote-right"></i
 											></sup>
-											Håkon Wium Lie, pioneer of CSS, rated your website's styling 4
-											out of 5 stars. Praised consistent and visually appealing
-											design, attention to detail, and easy maintenance. Suggested
-											areas for improvement, but praised well-structured HTML.
-											Overall impressed with look and feel. Great job!
+											Håkon Wium Lie, 'I rate your website's styling 4 out of 5
+											stars.' I praised the consistent and visually appealing
+											design, attention to details, and easy maintenance. I
+											suggested areas for improvement, but praised the
+											well-structured HTML. I was overall impressed with the look
+											and feel. 'Great job!'
 											<sup><i class="fa-solid fa-quote-right"></i></sup>
 											-
 											<span class="fw-bold" style="font-size: 17px"
@@ -546,7 +551,7 @@
 											<sup style="display: inline-block; transform: scale(-1, 1)"
 												><i class="fa-solid fa-quote-right"></i
 											></sup>
-											Sir Tim Berners-Lee rated your website design 4.5 out of 5
+											Sir Tim Berners-Lee, I rated your website design 4.5 out of 5
 											stars. Praised user-friendly interface, intuitive navigation,
 											clean aesthetic. Impressed with speedy page load times and
 											responsive design. Suggested improvements, but highly praised
@@ -582,12 +587,11 @@
 											<sup style="display: inline-block; transform: scale(-1, 1)"
 												><i class="fa-solid fa-quote-right"></i
 											></sup>
-											Brendan Eich, creator of JavaScript, rated your website's
-											JavaScript 4 out of 5 stars. Impressed by seamless
-											integration, dynamic elements, and efficient execution.
-											Suggested optimizations for performance and noted strong
-											coding structure. Overall great job bringing website to life
-											with top-notch JS.
+											Brendan Eich, I rated your website's JavaScript functionality
+											4 out of 5 stars. Impressed by seamless integration, dynamic
+											elements, and efficient execution. Suggested optimizations for
+											performance and noted strong coding structure. Overall great
+											job bringing website to life with top-notch JS.
 											<sup><i class="fa-solid fa-quote-right"></i></sup>
 											-
 											<span class="fw-bold" style="font-size: 17px"
@@ -710,6 +714,7 @@
 										>Name <span class="text-danger">*</span></label
 									>
 									<input
+										style="font-family: 'Poppins', sans-serif"
 										id="name"
 										type="text"
 										name="name"
@@ -722,6 +727,7 @@
 										>Email <span class="text-danger">*</span></label
 									>
 									<input
+										style="font-family: 'Poppins', sans-serif"
 										id="email"
 										type="email"
 										name="email"
@@ -736,6 +742,7 @@
 										>Subject <span class="text-danger">*</span></label
 									>
 									<input
+										style="font-family: 'Poppins', sans-serif"
 										id="subject"
 										type="text"
 										name="subject"
@@ -750,6 +757,7 @@
 										>Message <span class="text-danger">*</span></label
 									>
 									<textarea
+										style="font-family: 'Poppins', sans-serif"
 										id="message"
 										class="border border-danger-subtle fs-5 form-control focus-ring-danger focus-ring"
 										placeholder="e.g. Dear Athena..."
@@ -827,7 +835,7 @@
 	</body>
 	<script src="https://unpkg.com/popper.js@1"></script>
 	<script src="https://unpkg.com/tippy.js@5"></script>
-	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 	<script src="https://www.google.com/recaptcha/api.js?render=6LfGiUYkAAAAAAzLKWmTFr5ZlrmyjX3JRz1RTOs6"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 	<script

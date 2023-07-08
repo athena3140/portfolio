@@ -8,6 +8,19 @@
 	-o-transition: 0.3s;
 	transition: 0.3s;
 }
+.load-bar {
+	margin-top: 20px;
+	width: 15%;
+	height: 7px;
+	border-radius: 10px;
+	background-color: #bdbdbd;
+}
+.load-bar div {
+	background-color: #c22424;
+	width: 0%;
+	height: 100%;
+	border-radius: 10px;
+}
 *,
 .loader {
 	-webkit-box-sizing: border-box;
@@ -191,6 +204,7 @@ body {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: column;
 }
 section:focus {
 	outline: 0;
@@ -264,6 +278,9 @@ svg {
 		font-size: 1.6rem;
 		bottom: 17%;
 	}
+	.load-bar {
+		width: 30%;
+	}
 }
 @media screen and (max-width: 576px) {
 	.upIcon {
@@ -271,6 +288,15 @@ svg {
 		height: 40px;
 		font-size: 1.5rem;
 		bottom: 13%;
+	}
+	.load-bar {
+		width: 33%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.load-bar {
+		width: 45%;
 	}
 }
 .warpper {
