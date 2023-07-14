@@ -22,10 +22,10 @@ to keep it simple and showcase your best work.
 
 ### Built With
 
--  [![forthebadge](https://img.shields.io/badge/Made%20With-BoootStrap-green)](#)
--  [![forthebadge](https://img.shields.io/badge/Made%20With-HTML-green)](https://forthebadge.com)
--  [![forthebadge](https://img.shields.io/badge/Made%20With-CSS-green)](https://forthebadge.com)
--  [![forthebadge](https://img.shields.io/badge/Made%20With-JavaScript-green)](https://forthebadge.com)
+-  [![forthebadge](https://img.shields.io/badge/Made%20With-BoootStrap-green)](#built-with)
+-  [![forthebadge](https://img.shields.io/badge/Made%20With-HTML-green)](#built-with)
+-  [![forthebadge](https://img.shields.io/badge/Made%20With-CSS-green)](#built-with)
+-  [![forthebadge](https://img.shields.io/badge/Made%20With-JavaScript-green)](#built-with)
 
 ## Features
 
