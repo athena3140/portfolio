@@ -1,7 +1,10 @@
-let audio = new Audio("./static/audio.mp3");
-icon = document.getElementById("upIcon");
-easterImg = document.getElementById("imgclick");
-loader = document.getElementById("loader");
+let audio = new Audio("./static/audio.mp3"),
+	icon = document.getElementById("upIcon"),
+	easterImg = document.getElementById("imgclick"),
+	loader = document.getElementById("loader"),
+	clickCount = 0,
+	fadeOutInterval;
+document.getElementById("year").innerText = new Date().getFullYear();
 document.querySelectorAll("body *").forEach((a) => {
 	a.tabIndex = -1;
 });
@@ -36,8 +39,7 @@ document.querySelectorAll(".nav-item a,.list-inline-item a").forEach((a) => {
 		window.scrollTo({ top: b - document.querySelector(".navbar").offsetHeight - 10, behavior: "smooth" });
 	});
 });
-let clickCount = 0,
-	fadeOutInterval;
+
 function mousedown() {
 	easterImg.classList.remove("shadow-sm");
 	easterImg.style.transform = "scale(.97)";
@@ -73,8 +75,7 @@ if (
 				0 <= a ? ((a -= 0.05), (audio.volume = a)) : (clearInterval(b), audio.pause());
 			}, 100);
 		}
-	}),
-	992 > screen.width)
+	}))
 )
 	null;
 else {
@@ -199,23 +200,23 @@ $(document).ready(function () {
 	});
 
 	window.addEventListener("load", () => {
-		document.body.style.cssText = "overflow:hidden; height: 100svh";
 		icon.style.cssText = "opacity: 0; pointer-events: none";
 		setTimeout(() => {
 			loader.style.cssText = "opacity:0;pointer-events:none";
 			500 > scrollY
-				? (document.getElementById("spinner").style.cssText = "transform:scale(7.5)")
+				? (document.getElementById("spinner").style.cssText = "transform:scale(5.5)")
 				: (document.getElementById("spinner").style.cssText = "transform:scale(.2)");
 			setTimeout(() => {
 				new Typewriter("#typewriter", {
 					strings: ["Athena", "Linn Myat Htet"],
 					autoStart: !0,
 					loop: !0,
-					pauseFor: 1800,
+					pauseFor: 2500,
+					deleteSpeed: 100,
 				});
-				document.getElementById("home").classList.add("animate__animated", "animate__zoomIn");
-				500 > scrollY &&
-					document.getElementById("navbar").classList.add("animate__animated", "animate__zoomIn");
+				// document.getElementById("home").classList.add("animate__animated", "animate__zoomIn");
+				// 500 > scrollY &&
+				// 	document.getElementById("navbar").classList.add("animate__animated", "animate__zoomIn");
 			}, 20);
 			document.body.style.cssText = "overflow: auto; height: auto";
 		}, 500);
@@ -231,10 +232,27 @@ $(document).ready(function () {
 		}
 	};
 });
+(function () {
+	const resources = Array.from(
+		document.querySelectorAll("link:not([data-not-load-check]),script:not([data-not-load-check]),img,audio")
+	);
+	let loadedResources = 0;
+	Promise.all(
+		resources.map((resource) => {
+			return fetch(resource.src || resource.href).then(() => {
+				loadedResources++;
+				const percentageLoaded = (loadedResources / resources.length) * 100;
+				document.getElementById("loadStatus").style.width = percentageLoaded + "%";
+			});
+		})
+	);
+})();
 
-document.onreadystatechange = function () {
-	(loadStatus = document.getElementById("loadStatus")),
-		"interactive" === document.readyState
-			? (loadStatus.style.width = "50%")
-			: "complete" === document.readyState && (loadStatus.style.width = "100%");
-};
+ScrollReveal({
+	delay: 100,
+	reset: true,
+	interval: 5000,
+});
+scrollConfig = { distance: "30%", origin: "top" };
+
+ScrollReveal().reveal(".scrollReveal", scrollConfig);
