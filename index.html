@@ -43,7 +43,11 @@
 				>Looks like you're viewing this page from GitHub. Would you like to visit the
 				<a href="https://athena3140.tech/portfolio" class="link-danger">main site</a> instead?</span
 			>
-			<button type="button" class="btn-close fs-6 float-end" aria-label="Close"></button>
+			<button
+				onclick="$('.siteMoveAlert').css({ top: -$('.navbar').outerHeight() })"
+				type="button"
+				class="btn-close fs-6 float-end"
+				aria-label="Close"></button>
 		</div>
 		<div class="warpper" id="loader">
 			<div id="spinner" class="lds-spinner">

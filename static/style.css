@@ -231,6 +231,13 @@ svg {
 	border: none !important;
 	outline: 0 !important;
 }
+
+@media screen and (max-width: 1200px) {
+	.load-bar {
+		width: 20%;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.load-bar {
 		width: 30%;
